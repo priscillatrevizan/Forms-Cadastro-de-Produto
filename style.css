@@ -1,66 +1,91 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 20px;
 }
 
+header,
 h1,
 h2 {
   color: #333;
 }
 
-#cadastro-form {
+section {
   margin-bottom: 20px;
 }
 
-#cadastro-form input[type="text"],
-#cadastro-form input[type="number"],
-#cadastro-form textarea,
-#cadastro-form select {
+input[type="text"],
+input[type="number"],
+textarea,
+select {
   margin-bottom: 10px;
-  width: 100%;
+  padding: 6px;
+  width: 80%;
 }
 
-#cadastro-form button {
+button {
   background-color: #4caf50;
   color: white;
+  font-weight: 600;
+  text-transform: uppercase;
   padding: 10px 20px;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-#cadastro-form button:hover {
-  background-color: #45a049;
+button:hover {
+  background-color: #106414;
 }
 
-#listagem table {
+table {
   border-collapse: collapse;
   width: 100%;
 }
 
-#listagem th,
-#listagem td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
 }
 
-#listagem th {
+th {
   background-color: #f2f2f2;
 }
 
-#listagem tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-#listagem tr:hover {
+tr:hover {
   background-color: #ddd;
 }
 
-/* Estilos para os alertas de erro */
 .error-alert {
   background-color: #f44336;
   color: white;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+}
+
+.confirmacao {
+  background-color: #ffc107;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.confirmacao button {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.confirmacao button:hover {
+  background-color: #45a049;
 }

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro e Listagem de Produtos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Cadastro e Listagem de Produtos</h1>
 
-    <div id="cadastro-form">
+    <section id="cadastro-form">
         <h2>Cadastrar Produto</h2>
         <label for="nome">Nome do Produto:</label><br>
         <input type="text" id="nome"><br>
@@ -25,9 +30,9 @@
             <option value="nao">Não</option>
         </select><br>
         <button onclick="cadastrarProduto()">Cadastrar</button>
-    </div>
+    </section>
 
-    <div id="listagem">
+    <section id="listagem">
         <h2>Listagem de Produtos</h2>
         <table id="produtos-table">
             <thead>
@@ -41,7 +46,7 @@
                 <!-- Aqui serão inseridos os produtos -->
             </tbody>
         </table>
-    </div>
+    </section>
 
     <script src="forms.js"></script>
 </body>
