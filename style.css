@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+#cadastro-form {
+  margin-bottom: 20px;
+}
+
+#cadastro-form input[type="text"],
+#cadastro-form input[type="number"],
+#cadastro-form textarea,
+#cadastro-form select {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#cadastro-form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#cadastro-form button:hover {
+  background-color: #45a049;
+}
+
+#listagem table {
+  border-collapse: collapse;
+  border-radius: 6px;
+  width: 100%;
+}
+
+#listagem th,
+#listagem td {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: left;
+}
+
+#listagem th {
+  background-color: #f2f2f2;
+}
+
+#listagem tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#listagem tr:hover {
+  background-color: #ddd;
+}
