@@ -34,14 +34,12 @@ h2 {
 
 #listagem table {
   border-collapse: collapse;
-  border-radius: 6px;
   width: 100%;
 }
 
 #listagem th,
 #listagem td {
   border: 1px solid #ddd;
-  border-radius: 6px;
   padding: 8px;
   text-align: left;
 }
@@ -56,4 +54,13 @@ h2 {
 
 #listagem tr:hover {
   background-color: #ddd;
+}
+
+/* Estilos para os alertas de erro */
+.error-alert {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }

@@ -7,8 +7,23 @@ function cadastrarProduto() {
   const disponivel = document.getElementById("disponivel").value === "sim";
 
   // Verifica se o nome do produto já existe na lista
-  if (produtos.some((produto) => produto.nome === nome)) {
-    alert("Este nome de produto já existe na lista. Por favor, escolha outro.");
+  const produtoExistente = produtos.find((produto) => produto.nome === nome);
+  if (produtoExistente) {
+    // Se o produto já existe e a disponibilidade é diferente, exibe mensagem de confirmação
+    if (produtoExistente.disponivel !== disponivel) {
+      if (
+        confirm(
+          `O produto "${nome}" já está cadastrado.\nDeseja alterar a disponibilidade?`
+        )
+      ) {
+        produtoExistente.disponivel = disponivel;
+        listarProdutos();
+      }
+    } else {
+      mostrarAlerta(
+        "Este nome de produto já existe na lista. Por favor, escolha outro."
+      );
+    }
     return;
   }
 
@@ -17,7 +32,7 @@ function cadastrarProduto() {
     produtos.push({ nome, descricao, valor, disponivel });
     listarProdutos();
   } else {
-    alert("Por favor, preencha o nome do produto e um valor válido.");
+    mostrarAlerta("Por favor, preencha o nome do produto e um valor válido.");
   }
 }
 
@@ -31,15 +46,23 @@ function listarProdutos() {
     const tr = document.createElement("tr");
     tr.innerHTML = `
             <td>${produto.nome}</td>
-            <td>R$ ${produto.valor.toFixed(
-              2
-            )}</td> <!-- Formata o valor com "R$" -->
-            <td>${
-              produto.disponivel ? "Sim" : "Não"
-            }</td> <!-- Mostra "Sim" se disponível, "Não" caso contrário -->
+            <td>R$ ${produto.valor.toFixed(2)}</td>
+            <td>${produto.disponivel ? "Sim" : "Não"}</td>
         `;
     listaProdutos.appendChild(tr);
   });
+}
+
+function mostrarAlerta(mensagem) {
+  const alerta = document.createElement("div");
+  alerta.classList.add("error-alert");
+  alerta.textContent = mensagem;
+
+  const cadastroForm = document.getElementById("cadastro-form");
+  cadastroForm.insertBefore(alerta, cadastroForm.firstChild);
+  setTimeout(() => {
+    alerta.remove();
+  }, 3000);
 }
 
 listarProdutos();
